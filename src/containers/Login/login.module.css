@@ -1,0 +1,44 @@
+.mainDiv {
+  opacity: 1;
+  height: 100vh;
+  background: #f2fbf9 0% 0% no-repeat padding-box;
+  position: relative;
+}
+
+.signinDiv {
+  width: 674px;
+  margin: 0 auto;
+  border: 2px solid red;
+  margin-top: 110px;
+  background: #00000033 0% 0% no-repeat padding-box;
+  border-radius: 12px;
+}
+
+.bg {
+  width: 674px;
+  height: 700px;
+}
+
+.signupButton {
+  background: #7cd2c6 0% 0% no-repeat padding-box;
+  color: #fff;
+  border-radius: 24px;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  bottom: 260px;
+  margin-bottom: 12px;
+  width: 295px;
+  height: 48px;
+}
+
+.signinButton {
+  background: #ffffff 0% 0% no-repeat padding-box;
+  border-radius: 24px;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  bottom: 210px;
+  width: 295px;
+  height: 48px;
+}
