@@ -1,0 +1,5 @@
+export const userType={
+    SIGNIN_USER:"SIGNIN_USER",
+    SIGNUP_USER:"SIGNUP_USER",
+    SIGNOUT_USER:"SIGNOUT_USER"
+}

@@ -5,6 +5,9 @@ import bg from '../../assets/images/bg.jpg'
 import styles from './login.module.css'
 import { Redirect, withRouter } from 'react-router-dom';
 
+import {useDispatch} from 'react-redux'
+import {signIn, signUp} from '../Redux/actions/user'
+
 const layout = {
     labelCol: {
       span: 8,
@@ -21,8 +24,24 @@ const layout = {
   };
 
 const Login = (props) => {
+  
+   const dispatch = useDispatch() 
    const loginDetails = localStorage.getItem('token')
+
     const [slider,setSlider] = React.useState(0)
+    
+   
+   const handleSignUp = async (values)=>{
+       delete values.confirm
+       await dispatch(signUp(values))
+       setSlider(2)
+   }
+
+   const handleSignIn = async(values) =>{
+     await dispatch(signIn(values))
+     props.history.push('/home')
+   }
+
     if(loginDetails === null){
       return (
         <div>
@@ -46,6 +65,7 @@ const Login = (props) => {
                         <Form
                            {...layout}
                             name="register"
+                            onFinish={handleSignUp}
                             >
                              <Form.Item
                                    name="email"  
@@ -104,7 +124,7 @@ const Login = (props) => {
                                        className={styles.signupButton} 
                                        style={{position:'static',marginTop:'2rem'}} 
                                        htmlType='submit'
-                                       onClick={()=>setSlider(2)}>
+                                      >
                                      SIGN UP
                                    </Button>
                                  </Form.Item>                         
@@ -127,6 +147,7 @@ const Login = (props) => {
                        <Form
                            {...layout}
                             name="login"
+                            onFinish={handleSignIn}
                             >
                              <Form.Item
                                    name="email"  
@@ -162,11 +183,6 @@ const Login = (props) => {
                                        className={styles.signupButton} 
                                        style={{position:'static',marginTop:'2rem'}} 
                                        htmlType='submit'
-                                       onClick={()=>
-                                        {
-                                        localStorage.setItem('token','aghgahpgha')
-                                        props.history.push('/home')}
-                                        }
                                        >
                                      LOGIN
                                    </Button>

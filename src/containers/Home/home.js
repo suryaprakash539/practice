@@ -1,7 +1,8 @@
 import React from 'react'
-import { Redirect } from 'react-router-dom'
+import { useSelector } from 'react-redux'
 
 const Home = ()=>{
+console.log(useSelector(state=>state))
   return (
     <div>
        Home
