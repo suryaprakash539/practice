@@ -1,22 +1,23 @@
 .mainDiv {
   opacity: 1;
-  height: 100vh;
+  border: 2px solid yellow;
   background: #f2fbf9 0% 0% no-repeat padding-box;
-  position: relative;
 }
 
 .signinDiv {
   width: 674px;
   margin: 0 auto;
-  border: 2px solid red;
   margin-top: 110px;
+  border: 2px solid red;
   background: #00000033 0% 0% no-repeat padding-box;
   border-radius: 12px;
+  position: relative;
 }
 
 .bg {
-  width: 674px;
-  height: 700px;
+  width: 670px;
+  height: 500px;
+  border-radius: 12px;
 }
 
 .signupButton {
