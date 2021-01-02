@@ -1,0 +1,39 @@
+.header {
+  background: #136c72;
+  padding: 0.5rem 1rem;
+}
+.nav {
+  display: flex;
+  justify-content: space-between;
+}
+.list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+
+.item {
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.item + .item {
+  margin-left: 1rem;
+}
+
+.btn {
+  display: inline-block;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #23424a;
+  background-color: #38cfd9;
+  border-radius: 100px;
+}
+
+.btn:hover,
+.btn:focus {
+  opacity: 0.75;
+}
